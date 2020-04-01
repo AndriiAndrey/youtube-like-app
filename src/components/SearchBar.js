@@ -40,8 +40,11 @@ const SearchBar = ({handleSubmit, fitchMoreVideos, onVideoSelect}) => {
             </form>
             {isToggle ?
             <Grid container spacing={4} justify="space-around">
+                <Grid item xs={12}>
+                    <div className="card-video-item-container">
             {listOfVideos}
-            
+                    </div>
+                </Grid>
             {videos.length > 0
             ?<Grid className='more-results-button' item xs={12}>
                 <Button variant="outlined" onClick={fitchMoreVideos}>more results</Button>

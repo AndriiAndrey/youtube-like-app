@@ -1,12 +1,11 @@
 import React from 'react';
-import { Grid, Typography, CardActionArea, 
+import { Typography, CardActionArea, 
     CardContent, CardMedia } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 
 
 const VideoItemSearch = ({ video, onVideoSelect }) => {
     return (
-        <Grid item xs={6} md={4} xl={3} >
             <Card onClick={() => onVideoSelect(video)} className="card-video-item">
               <CardActionArea className="card-video-action">
                 <CardMedia className='card-video-image'
@@ -20,7 +19,6 @@ const VideoItemSearch = ({ video, onVideoSelect }) => {
                </CardContent>
             </CardActionArea>
             </Card>
-        </Grid>
     )
 }
 

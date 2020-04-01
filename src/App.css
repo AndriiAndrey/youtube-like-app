@@ -1,3 +1,13 @@
+body{
+    margin: 0;
+}
+
+.header{
+    width: 100%;
+    background-color: rgb(214, 55, 55);
+    height: 105px;
+}
+
 .main-container{
     padding: 20px;
     overflow: hidden;
@@ -6,34 +16,45 @@
     width: 100%;
 }
 /* search-bar */
+.search-bar-container{
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    width: 90%;
+}
+
 .search-paper{
     padding: 15px;
     min-height: 35px;
 }
 .search-button:hover{
-cursor: pointer;
-color: lightskyblue;
+    cursor: pointer;
+    color: rgb(49, 49, 255);
 }
 
 .more-results-button{
     text-align: center;
 }
+
+.card-video-item-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
 /* VideoItemSearch */
 .card-video-item{
-    display: flex;
-    align-items: center;
     cursor: pointer;
-    max-width: 360px;
-    height: 100%;
+    width: 100%;
 }
-.card-video-action{
-    height: 100%;
-}
+
 .card-video-image{
-    height: 70%;
+    height: 200px;
 }
+
 .card-video-content{
-    height: 30%;
+    height: 50px;
     overflow: hidden;
 }
 

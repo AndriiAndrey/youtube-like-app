@@ -65,28 +65,34 @@ const App = () => {
 
     
     return (
-        <div className='main-container'>
-         <YoutubeContext.Provider value={providerValue}>
-            <Grid container spacing={2} justify="center" alignItems="stretch" className='grid-container'>
-        
-                <Grid item xs={12} >
-                    <SearchBar handleSubmit={handleSubmit} 
-                        onVideoSelect={onVideoSelect}
-                        fitchMoreVideos={fitchMoreVideos} />
-                </Grid>
-                <Grid item xs={12} md={8} className='video-detail-container'>
-                    <VideoDetail/>
-                </Grid>
-                <Grid item xs={12} md={4}>
-                    <VideoList videos={recomendedVideos} 
-                        onVideoSelect={onVideoSelect} />
-                </Grid>
-                <Grid item xs={12} style={{marginTop: '40px'}}>
-                    <CommentsComponent comments={comments} />
+        <div>
+            <header className="header">
+            </header>
+            <div className='main-container'>
+            <YoutubeContext.Provider value={providerValue}>
+                <Grid container spacing={2} justify="center" alignItems="stretch" className='grid-container'>
+            
+                    <Grid item xs={12} md={8} className='video-detail-container'>
+                        <VideoDetail/>
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <VideoList videos={recomendedVideos} 
+                            onVideoSelect={onVideoSelect} />
+                    </Grid>
+                    <Grid item xs={12} style={{marginTop: '40px'}}>
+                        <CommentsComponent comments={comments} />
+                    </Grid>
+                
                 </Grid>
             
-            </Grid>
-         </YoutubeContext.Provider>
+
+                    <div className="search-bar-container">
+                        <SearchBar handleSubmit={handleSubmit} 
+                            onVideoSelect={onVideoSelect}
+                            fitchMoreVideos={fitchMoreVideos} />
+                    </div>
+            </YoutubeContext.Provider>
+            </div>
         </div>
     )
 }
