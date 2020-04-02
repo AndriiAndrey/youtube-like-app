@@ -4,11 +4,14 @@ import { Grid } from '@material-ui/core';
 import { Paper, TextField, ClickAwayListener, Button } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/SearchOutlined';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import { YoutubeContext } from '../YoutubeContext';
+import { YoutubeContext } from '../context/YoutubeContext';
 
-const SearchBar = ({handleSubmit, fitchMoreVideos, onVideoSelect}) => {
+const SearchBar = () => {
+
     const {videos, searchValue, setSearchValue,
-        isToggle, setIsToggle, } = useContext(YoutubeContext)
+        isToggle, setIsToggle,handleSubmit, 
+        fitchMoreVideos, onVideoSelect } = useContext(YoutubeContext)
+
     const handleChange = (e) => {
         setSearchValue(e.target.value)
     };

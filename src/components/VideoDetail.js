@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Paper, Typography} from '@material-ui/core';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAltOutlined';
 import ThumbDownAltIcon from '@material-ui/icons/ThumbDownAltOutlined';
-import { YoutubeContext } from '../YoutubeContext';
+import { YoutubeContext } from '../context/YoutubeContext';
 
 const VideoDetail = () => {
     const { selectedVideo, likesCount, disLikesCount } = useContext(YoutubeContext)

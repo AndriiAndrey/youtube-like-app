@@ -62,6 +62,7 @@ body{
 
 .video-detail-container{
     margin-bottom: 20px!important;
+    height: 700px;
 }
 
 .video-content-windowe{
@@ -115,4 +116,22 @@ body{
     margin-right: 20px;
     border: none;
     border-radius: 50%;
+}
+
+@media screen and (max-width: 1200px){
+    .video-detail-container{
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .video-detail-container{
+        height: 500px;
+}
+}
+
+@media screen and (max-width: 480px){
+    .video-detail-container{
+        height: 350px;
+    }
 }
